@@ -1,0 +1,1 @@
+function hlToast(msg){const el=document.createElement('div');el.textContent=msg;el.style.cssText='position:fixed;right:18px;top:18px;z-index:9999;background:#07111f;color:#fff;padding:12px 16px;border-radius:14px;font-weight:900;box-shadow:0 16px 34px rgba(0,0,0,.18)';document.body.appendChild(el);setTimeout(()=>el.remove(),2600)}

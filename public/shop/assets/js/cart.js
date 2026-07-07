@@ -1,0 +1,1 @@
+const HL_CART_KEY='hl_cart_v2';function hlCart(){try{return JSON.parse(localStorage.getItem(HL_CART_KEY)||'[]')}catch{return[]}}function hlSaveCart(c){localStorage.setItem(HL_CART_KEY,JSON.stringify(c));}function hlMoney(n){return Number(n||0).toLocaleString('vi-VN')+'đ';}

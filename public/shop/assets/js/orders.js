@@ -1,0 +1,1 @@
+async function hlCreateOrder(order){const data=await hlGetData(); data.orders=data.orders||[]; data.orders.unshift({...order,id:Date.now(),status:'Mới',createdAt:new Date().toISOString()}); await hlSaveData(data); return order;}

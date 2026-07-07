@@ -1,0 +1,312 @@
+{
+  "revision": 2,
+  "updatedAt": "2026-07-07T00:00:00.000Z",
+  "updatedBy": "full-suite-upgrade",
+  "data": {
+    "products": [
+      {
+        "id": 101,
+        "name": "RAM Kingston Fury Beast 16GB DDR4 3200MHz",
+        "sku": "KF432C16BB/16",
+        "category": "RAM",
+        "brand": "Kingston",
+        "price": 890000,
+        "salePrice": 790000,
+        "stock": 24,
+        "minStock": 5,
+        "imageUrl": "",
+        "description": "RAM DDR4 16GB bus 3200MHz, phù hợp nâng cấp máy tính văn phòng, gaming phổ thông và đồ họa nhẹ.",
+        "isActive": true
+      },
+      {
+        "id": 102,
+        "name": "SSD Kingston NV2 500GB NVMe PCIe 4.0",
+        "sku": "SNV2S/500G",
+        "category": "SSD",
+        "brand": "Kingston",
+        "price": 1150000,
+        "salePrice": 990000,
+        "stock": 18,
+        "minStock": 5,
+        "imageUrl": "",
+        "description": "SSD NVMe tốc độ cao, khởi động Windows nhanh, phù hợp nâng cấp laptop và PC.",
+        "isActive": true
+      },
+      {
+        "id": 103,
+        "name": "Nguồn HL ATX 550W 80 Plus Bronze",
+        "sku": "HL-ATX550-BR",
+        "category": "Nguồn",
+        "brand": "HL",
+        "price": 780000,
+        "salePrice": 690000,
+        "stock": 15,
+        "minStock": 5,
+        "imageUrl": "",
+        "description": "Nguồn máy tính 550W chuẩn 80 Plus Bronze, ổn định cho PC văn phòng, gaming phổ thông.",
+        "isActive": true
+      },
+      {
+        "id": 104,
+        "name": "Màn hình Acer EK221Q E3 21.5 inch 100Hz",
+        "sku": "EK221Q-E3",
+        "category": "Màn hình",
+        "brand": "Acer",
+        "price": 2150000,
+        "salePrice": 1990000,
+        "stock": 10,
+        "minStock": 3,
+        "imageUrl": "",
+        "description": "Màn hình Full HD 21.5 inch tần số quét 100Hz, phù hợp văn phòng, học tập, bán hàng.",
+        "isActive": true
+      },
+      {
+        "id": 105,
+        "name": "CPU Intel Core i5-12400 Box Chính Hãng",
+        "sku": "BX8071512400",
+        "category": "CPU",
+        "brand": "Intel",
+        "price": 3890000,
+        "salePrice": 3650000,
+        "stock": 8,
+        "minStock": 3,
+        "imageUrl": "",
+        "description": "CPU 6 nhân 12 luồng, hiệu năng tốt cho máy văn phòng cao cấp, gaming và đồ họa cơ bản.",
+        "isActive": true
+      },
+      {
+        "id": 106,
+        "name": "Mainboard ASUS PRIME H610M-K D4",
+        "sku": "PRIME-H610M-K-D4",
+        "category": "Mainboard",
+        "brand": "ASUS",
+        "price": 2190000,
+        "salePrice": 2050000,
+        "stock": 7,
+        "minStock": 3,
+        "imageUrl": "",
+        "description": "Mainboard H610 hỗ trợ Intel Gen 12/13, RAM DDR4, phù hợp build PC tiết kiệm ổn định.",
+        "isActive": true
+      },
+      {
+        "id": 107,
+        "name": "VGA ASUS Dual GeForce RTX 4060 OC 8GB",
+        "sku": "DUAL-RTX4060-O8G",
+        "category": "VGA",
+        "brand": "ASUS",
+        "price": 8990000,
+        "salePrice": 8590000,
+        "stock": 4,
+        "minStock": 2,
+        "imageUrl": "",
+        "description": "Card đồ họa RTX 4060 8GB, phù hợp gaming Full HD, thiết kế, dựng video và AI cơ bản.",
+        "isActive": true
+      },
+      {
+        "id": 108,
+        "name": "Chuột không dây Logitech M331 Silent Plus",
+        "sku": "M331-BLK",
+        "category": "Chuột",
+        "brand": "Logitech",
+        "price": 390000,
+        "salePrice": 329000,
+        "stock": 35,
+        "minStock": 8,
+        "imageUrl": "",
+        "description": "Chuột không dây yên tĩnh, pin lâu, phù hợp văn phòng và học tập.",
+        "isActive": true
+      }
+    ],
+    "orders": [],
+    "stockHistory": [],
+    "suppliers": [
+      {
+        "id": 1,
+        "name": "Nhà phân phối HL",
+        "phone": "0909000000",
+        "email": "sale@hlvietnam.vn"
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "fullName": "Admin HL",
+        "email": "admin@hl.com",
+        "password": "Admin@123456",
+        "role": "ADMIN_WEB",
+        "isActive": true
+      }
+    ],
+    "coupons": [],
+    "retailInvoices": [],
+    "contracts": [],
+    "categories": [
+      {
+        "id": 1,
+        "name": "RAM",
+        "slug": "ram",
+        "isActive": true,
+        "icon": "💻"
+      },
+      {
+        "id": 2,
+        "name": "SSD",
+        "slug": "ssd",
+        "isActive": true,
+        "icon": "🧠"
+      },
+      {
+        "id": 3,
+        "name": "Nguồn",
+        "slug": "nguồn",
+        "isActive": true,
+        "icon": "💾"
+      },
+      {
+        "id": 4,
+        "name": "Màn hình",
+        "slug": "màn-hình",
+        "isActive": true,
+        "icon": "⚡"
+      },
+      {
+        "id": 5,
+        "name": "CPU",
+        "slug": "cpu",
+        "isActive": true,
+        "icon": "🖥️"
+      },
+      {
+        "id": 6,
+        "name": "Mainboard",
+        "slug": "mainboard",
+        "isActive": true,
+        "icon": "🎮"
+      },
+      {
+        "id": 7,
+        "name": "VGA",
+        "slug": "vga",
+        "isActive": true,
+        "icon": "🔌"
+      },
+      {
+        "id": 8,
+        "name": "Chuột",
+        "slug": "chuột",
+        "isActive": true,
+        "icon": "🖱️"
+      }
+    ],
+    "brands": [
+      {
+        "id": 1,
+        "name": "Kingston",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "HL",
+        "isActive": true
+      },
+      {
+        "id": 3,
+        "name": "Acer",
+        "isActive": true
+      },
+      {
+        "id": 4,
+        "name": "Intel",
+        "isActive": true
+      },
+      {
+        "id": 5,
+        "name": "ASUS",
+        "isActive": true
+      },
+      {
+        "id": 6,
+        "name": "Logitech",
+        "isActive": true
+      }
+    ],
+    "banners": [
+      {
+        "id": 1,
+        "title": "HL TechMart - Deal linh kiện tháng này",
+        "subtitle": "Build PC nhanh, linh kiện chuẩn, bảo hành rõ ràng",
+        "position": "home-hero",
+        "isActive": true
+      }
+    ],
+    "settings": {
+      "websiteName": "HL TechMart",
+      "hotline": "1900.0000",
+      "zalo": "0900.000.000",
+      "email": "hotro@hltech.vn",
+      "address": "TP. Hồ Chí Minh",
+      "shippingNote": "Giao hàng toàn quốc",
+      "warrantyNote": "Bảo hành theo chính sách hãng"
+    },
+    "customers": [],
+    "contacts": [],
+    "reviews": [],
+    "warranties": [
+      {
+        "id": 1,
+        "serial": "DEMO123456",
+        "product": "RAM Kingston Fury 16GB",
+        "phone": "0900000000",
+        "orderId": "1001",
+        "expireAt": "2027-07-04",
+        "status": "Còn bảo hành"
+      }
+    ],
+    "buildPcPresets": [
+      {
+        "id": 1,
+        "name": "PC văn phòng 10 triệu",
+        "budget": 10000000,
+        "description": "Văn phòng, học tập, bán hàng"
+      },
+      {
+        "id": 2,
+        "name": "PC gaming 20 triệu",
+        "budget": 20000000,
+        "description": "Gaming FHD, đồ họa nhẹ"
+      }
+    ],
+    "news": [
+      {
+        "id": 1,
+        "title": "Khai trương giao diện HL TechMart Full Suite",
+        "content": "Website đã bổ sung nhiều module bán hàng, bảo hành, Build PC, khuyến mãi."
+      }
+    ],
+    "menus": [
+      {
+        "id": 1,
+        "name": "Trang chủ",
+        "url": "/"
+      },
+      {
+        "id": 2,
+        "name": "Sản phẩm",
+        "url": "/pages/san-pham.html"
+      },
+      {
+        "id": 3,
+        "name": "Build PC",
+        "url": "/pages/build-pc.html"
+      }
+    ],
+    "pages": [
+      {
+        "id": 1,
+        "title": "Chính sách bảo hành",
+        "slug": "bao-hanh",
+        "content": "Bảo hành theo chính sách hãng và điều kiện thực tế."
+      }
+    ]
+  }
+}

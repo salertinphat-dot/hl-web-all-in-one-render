@@ -1,0 +1,1 @@
+async function adminApi(path,options={}){const base=window.HL_API_BASE||`${location.origin}/api`;const res=await fetch(`${base}${path}`,{headers:{'Content-Type':'application/json'},...options});return res.json();}

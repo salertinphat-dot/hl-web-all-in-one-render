@@ -1,0 +1,23 @@
+{
+  "name": "hl-web-all-in-one-sync",
+  "version": "1.0.0",
+  "description": "HL Admin + Web bán hàng Full Suite nhiều module, máy A sửa máy B thấy qua API đồng bộ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "reset:data": "node scripts/reset-data.js",
+    "backup:data": "node scripts/backup-data.js",
+    "check": "node -e \"console.log('HL Full Suite OK')\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

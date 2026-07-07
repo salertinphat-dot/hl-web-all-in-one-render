@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hl-web-all-in-one-sync
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JSON_LIMIT
+        value: 100mb
+      - key: CORS_ORIGINS
+        value: ""

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HL TechMart - Siêu thị linh kiện máy tính</title>
+  <meta name="description" content="HL TechMart - Web bán linh kiện máy tính, PC, RAM, SSD, nguồn, màn hình, VGA, CPU, mainboard. Admin sửa sản phẩm, website tự đồng bộ." />
+  <script src="/shop-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/ultra-pro.css" />
+</head>
+<body>
+  <div class="promo-ribbon">
+    <div class="container">
+      <span class="ribbon-pill">⚡ Tuần lễ linh kiện chính hãng</span>
+      <span>Giảm tới <b class="ribbon-hot">35%</b> cho RAM, SSD, PSU, màn hình</span>
+      <span class="hide-mobile">🎁 Miễn phí tư vấn build PC theo ngân sách</span>
+    </div>
+  </div>
+
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-left">
+        <span>☎ Hotline: <b>1900.1903</b></span>
+        <span>🕘 8h00 - 21h00</span>
+        <span>🚚 Giao hàng toàn quốc</span>
+      </div>
+      <div class="utility-links">
+        <a href="#lookup">Tra cứu đơn hàng</a>
+        <a href="#warranty">Bảo hành</a>
+        <a href="/admin/">Admin</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-main">
+      <a class="brand" href="/">
+        <div class="brand-mark"></div>
+        <div class="brand-name">
+          <b>HL TechMart</b>
+          <span>Linh kiện máy tính Việt Nam</span>
+        </div>
+      </a>
+
+      <div class="search-pro">
+        <select id="searchCategory"><option>Tất cả danh mục</option></select>
+        <input id="searchInput" placeholder="Nhập tên sản phẩm, từ khóa cần tìm..." />
+        <button onclick="renderAll()">⌕</button>
+      </div>
+
+      <div class="header-actions">
+        <button class="ha-item" onclick="document.getElementById('buildpc').scrollIntoView({behavior:'smooth'})">
+          <span class="ha-icon">🧩</span><span><b>Xây dựng PC</b><small>Gợi ý theo ngân sách</small></span>
+        </button>
+        <button class="ha-item" onclick="document.getElementById('lookup').scrollIntoView({behavior:'smooth'})">
+          <span class="ha-icon">🔎</span><span><b>Tra cứu</b><small>Đơn hàng / bảo hành</small></span>
+        </button>
+        <button class="ha-item" onclick="toggleCart(true)">
+          <span class="ha-icon">🛒</span><span><b>Giỏ hàng</b><small><span id="cartCount2">0</span> sản phẩm</small></span><em class="cart-chip" id="cartCount">0</em>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-pro">
+      <div class="container">
+        <button class="menu-open" onclick="document.getElementById('categoryList').scrollIntoView({behavior:'smooth'})">☰ Danh mục sản phẩm</button>
+        <div class="nav-links">
+          <button onclick="quickSearch('PC')">PC đồng bộ</button>
+          <button onclick="quickSearch('RAM')">RAM</button>
+          <button onclick="quickSearch('SSD')">SSD</button>
+          <button onclick="quickSearch('Nguồn')">Nguồn máy tính</button>
+          <button onclick="quickSearch('VGA')">VGA</button>
+          <button onclick="quickSearch('Màn hình')">Màn hình</button>
+          <button onclick="quickSearch('Combo')">Combo nâng cấp</button>
+          <a href="/admin/">Quản trị</a>
+        </div>
+        <div class="nav-cta">🔥 Flash sale hôm nay</div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container main-layout">
+    <aside class="side-rail">
+      <div class="rail-banner red">
+        <span class="rail-badge">DEAL PC HOT</span>
+        <h3>Build PC tiết kiệm</h3>
+        <p>Gợi ý cấu hình theo nhu cầu học tập, văn phòng, gaming và đồ họa.</p>
+        <div class="rail-price">từ 6.990.000đ</div>
+      </div>
+      <div class="rail-banner green">
+        <span class="rail-badge">BẢO HÀNH</span>
+        <h3>Hỗ trợ tận nơi</h3>
+        <p>Kiểm tra, tư vấn nâng cấp và vệ sinh máy tính định kỳ.</p>
+      </div>
+    </aside>
+
+    <section class="shop-core">
+      <section class="hero-zone">
+        <aside class="category-panel">
+          <div class="category-title">☰ Danh mục nổi bật</div>
+          <div class="category-list" id="categoryList"></div>
+        </aside>
+
+        <section class="hero-pro">
+          <div class="hero-kicker">⚡ HL TechMart Premium Store</div>
+          <h1>Siêu thị linh kiện máy tính chuyên nghiệp cho doanh nghiệp, trường học và game thủ</h1>
+          <p>Quản lý sản phẩm đồng bộ theo thời gian thực: Admin đăng bán, khách hàng mở web là thấy ngay sau khi tải lại trang.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})">Mua linh kiện ngay</button>
+            <button class="btn-secondary" onclick="document.getElementById('buildpc').scrollIntoView({behavior:'smooth'})">Tư vấn build PC</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><b>2h</b><span>Xác nhận đơn nhanh</span></div>
+            <div class="hero-stat"><b>100%</b><span>Dữ liệu đồng bộ Admin</span></div>
+            <div class="hero-stat"><b>24/7</b><span>Web online trên Render</span></div>
+          </div>
+        </section>
+
+        <aside class="deal-stack">
+          <div class="mini-panel dark">
+            <h3>Flash Sale linh kiện</h3>
+            <p>Giá tốt cho RAM, SSD, nguồn, màn hình.</p>
+            <div class="countdown"><div>08h</div><div>30m</div><div>26s</div></div>
+          </div>
+          <div class="mini-panel">
+            <h3>Thu cũ đổi mới</h3>
+            <p>Nâng cấp máy cũ, thay SSD, RAM, PSU, màn hình.</p>
+            <a class="mini-link" href="#contact">Nhận tư vấn →</a>
+          </div>
+          <div class="mini-panel">
+            <h3>Hỗ trợ dự án</h3>
+            <p>Báo giá máy tính, linh kiện, màn hình cho cơ quan/trường học.</p>
+            <a class="mini-link" href="/admin/">Vào Admin →</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="service-strip">
+        <div class="service-card"><i>🚚</i><div><b>Giao hàng toàn quốc</b><span>Đóng gói cẩn thận</span></div></div>
+        <div class="service-card"><i>🛡️</i><div><b>Bảo hành minh bạch</b><span>Theo chính sách cửa hàng</span></div></div>
+        <div class="service-card"><i>💬</i><div><b>Tư vấn cấu hình</b><span>Phù hợp ngân sách</span></div></div>
+        <div class="service-card"><i>💳</i><div><b>Thanh toán linh hoạt</b><span>COD / Chuyển khoản</span></div></div>
+      </section>
+
+      <div class="quick-tabs" id="quickTabs"></div>
+
+      <section class="section-card" id="productsSection">
+        <div class="section-head">
+          <div class="section-title">
+            <span class="section-icon">🛍️</span>
+            <div><h2>Sản phẩm đang bán</h2><p id="productCount">Đang tải dữ liệu...</p></div>
+          </div>
+          <div class="head-actions-mini">
+            <input class="mini-input" id="filterInput" placeholder="Lọc nhanh sản phẩm..." />
+            <select class="mini-select" id="priceSelect">
+              <option value="all">Tất cả giá</option>
+              <option value="under2">Dưới 2 triệu</option>
+              <option value="2to5">2 - 5 triệu</option>
+              <option value="5to10">5 - 10 triệu</option>
+              <option value="over10">Trên 10 triệu</option>
+            </select>
+            <select class="mini-select" id="sortSelect">
+              <option value="featured">Nổi bật</option>
+              <option value="sale">Đang sale</option>
+              <option value="priceAsc">Giá thấp - cao</option>
+              <option value="priceDesc">Giá cao - thấp</option>
+              <option value="stock">Tồn kho nhiều</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="products"></div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-title"><span class="section-icon">🔥</span><div><h2>Flash Sale nổi bật</h2><p>Những sản phẩm có giá khuyến mãi tốt nhất.</p></div></div>
+          <button class="btn-primary" onclick="quickSearch('')">Xem tất cả</button>
+        </div>
+        <div class="product-grid" id="flashProducts"></div>
+      </section>
+
+      <section class="section-card" id="buildpc">
+        <div class="section-head">
+          <div class="section-title"><span class="section-icon">🧩</span><div><h2>Build PC theo ngân sách</h2><p>Chọn ngân sách, hệ thống gợi ý sản phẩm phù hợp.</p></div></div>
+          <span class="chip">Ngân sách: <b id="budgetLabel" style="margin-left:6px"></b></span>
+        </div>
+        <div class="build-zone">
+          <div class="build-card">
+            <h3>Gợi ý cấu hình nhanh cho từng nhu cầu</h3>
+            <p>Dùng dữ liệu sản phẩm thật trong Admin. Khi Admin đổi giá hoặc thêm sản phẩm mới, khu Build PC cũng tự cập nhật.</p>
+            <div class="budget-row">
+              <button onclick="setBudget(10000000)">10 triệu</button>
+              <button onclick="setBudget(20000000)">20 triệu</button>
+              <button onclick="setBudget(35000000)">35 triệu</button>
+            </div>
+          </div>
+          <div class="build-list" id="buildList"></div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <div class="section-title"><span class="section-icon">🏷️</span><div><h2>Thương hiệu trong kho</h2><p>Thống kê tự động theo sản phẩm Admin đã đăng.</p></div></div>
+        </div>
+        <div class="brand-wall" id="brandWall"></div>
+      </section>
+
+      <section class="section-card" id="lookup">
+        <div class="section-head">
+          <div class="section-title"><span class="section-icon">🔎</span><div><h2>Tra cứu đơn hàng</h2><p>Khách nhập mã đơn hoặc số điện thoại để kiểm tra nhanh.</p></div></div>
+        </div>
+        <div class="lookup-box">
+          <input id="lookupInput" placeholder="Nhập mã đơn hoặc số điện thoại..." />
+          <button onclick="lookupOrder()">Tra cứu</button>
+        </div>
+        <div class="lookup-result" id="lookupResult">Chưa có thông tin tra cứu.</div>
+      </section>
+
+      <section class="section-card" id="warranty">
+        <div class="section-head">
+          <div class="section-title"><span class="section-icon">🛡️</span><div><h2>Dịch vụ & bảo hành</h2><p>Tăng độ tin cậy cho shop linh kiện máy tính.</p></div></div>
+        </div>
+        <div class="info-grid">
+          <div class="info-box"><i>🔧</i><h3>Kỹ thuật kiểm tra</h3><p>Kiểm tra linh kiện trước khi giao, hỗ trợ khách chọn cấu hình phù hợp nhu cầu.</p></div>
+          <div class="info-box"><i>📦</i><h3>Đóng gói an toàn</h3><p>Đóng gói chống sốc, hạn chế rủi ro khi vận chuyển linh kiện đi xa.</p></div>
+          <div class="info-box"><i>📑</i><h3>Hóa đơn & dự án</h3><p>Hỗ trợ báo giá, đơn hàng doanh nghiệp, trường học, cơ quan nhà nước.</p></div>
+        </div>
+      </section>
+    </section>
+
+    <aside class="side-rail">
+      <div class="rail-banner">
+        <span class="rail-badge">PC GAMING</span>
+        <h3>RTX Series</h3>
+        <p>Nâng cấp card đồ họa, nguồn, RAM và SSD cho gaming mượt hơn.</p>
+        <div class="rail-price">Deal cực tốt</div>
+      </div>
+      <div class="rail-banner red">
+        <span class="rail-badge">FLASH SALE</span>
+        <h3>Cuối tuần rồi!</h3>
+        <p>Ưu đãi linh kiện bán chạy, số lượng có hạn.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div><h3>HL TechMart</h3><p>Siêu thị linh kiện máy tính, PC, RAM, SSD, nguồn, màn hình, VGA. Dữ liệu website đồng bộ cùng Admin.</p></div>
+      <div><h4>Danh mục</h4><a onclick="quickSearch('RAM')">RAM máy tính</a><a onclick="quickSearch('SSD')">SSD / ổ cứng</a><a onclick="quickSearch('PC')">PC lắp ráp</a></div>
+      <div><h4>Hỗ trợ</h4><a href="#lookup">Tra cứu đơn hàng</a><a href="#warranty">Bảo hành</a><a href="/admin/">Trang quản trị</a></div>
+      <div><h4>Liên hệ</h4><p>Hotline: 1900.1903</p><p>Zalo: 0775 096 899</p><p>Email: support@hltechmart.vn</p></div>
+    </div>
+    <div class="footer-bottom"><div class="container">© HL TechMart - Website demo đồng bộ máy A sửa máy B thấy.</div></div>
+  </footer>
+
+  <div id="overlay" class="overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-head"><h3>Giỏ hàng</h3><button onclick="toggleCart(false)">×</button></div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Tổng tiền</span><b id="cartTotal">0đ</b></div>
+      <div class="checkout-form">
+        <input id="customerName" placeholder="Họ tên khách hàng" />
+        <input id="customerPhone" placeholder="Số điện thoại" />
+        <input id="customerAddress" placeholder="Địa chỉ giao hàng" />
+        <button onclick="placeOrder()">Gửi đơn hàng về Admin</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <div class="modal-img" id="modalImg"></div>
+      <div class="modal-info">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 id="modalName"></h2>
+        <div class="product-chips" id="modalChips"></div>
+        <div class="modal-price" id="modalPrice"></div>
+        <div class="modal-desc" id="modalDesc"></div>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-primary" id="modalAdd">Thêm vào giỏ</button>
+          <button class="btn-secondary" style="color:#0f172a;border-color:#dbe5f2!important;background:#f8fafc" onclick="closeModal()">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="float-contact">
+    <button class="float-btn"><i>💬</i>Chat Facebook</button>
+    <button class="float-btn"><i>📱</i>Tư vấn Zalo</button>
+    <button class="float-btn"><i>☎</i>1900.1903</button>
+  </div>
+  <div class="sync-dot" id="syncDot">Đang kết nối dữ liệu...</div>
+  <div class="compare-bar" id="compareBar"><div id="compareItems" style="display:flex;gap:8px;overflow:auto"></div><button onclick="showCompare()">So sánh</button></div>
+
+  <script src="/assets/js/ultra-pro.js"></script>
+</body>
+</html>

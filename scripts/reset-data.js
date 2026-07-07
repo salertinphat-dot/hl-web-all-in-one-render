@@ -1,0 +1,1 @@
+const fs=require('fs');const path=require('path');const p=path.join(__dirname,'..','data','db.json');const db={revision:1,updatedAt:new Date().toISOString(),updatedBy:'reset-script',data:{products:[],orders:[],contacts:[]}};fs.writeFileSync(p,JSON.stringify(db,null,2));console.log('Reset data done');

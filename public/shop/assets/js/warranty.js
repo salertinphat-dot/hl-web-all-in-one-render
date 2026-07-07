@@ -1,0 +1,1 @@
+async function hlLookupWarranty(keyword){const data=await hlGetData(); const list=data.warranties||[]; return list.filter(x=>String(x.serial||'').includes(keyword)||String(x.phone||'').includes(keyword)||String(x.orderId||'').includes(keyword));}
